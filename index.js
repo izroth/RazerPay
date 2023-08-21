@@ -10,8 +10,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const razorpay = new Razorpay({
-    key_id: 'rzp_test_1X2Y3Z4A5B6C7D',
-    key_secret: '1X2Y3Z4A5B6C7D8E9F0G1H2I3J4K5L6M7N8O9P0Q1R2S3T4U5V6W7X8Y9Z0A1B'
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_SECRET_KEY
 });
 
 app.post('/razorpay', async (req, res) => {
